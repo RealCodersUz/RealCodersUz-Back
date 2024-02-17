@@ -9,28 +9,11 @@ const { siteUrl } = require("../../shared/config");
  * @param {express.Response} res
  * @param {knex} db
  */
+// Services
 const getServices = async (req, res, next) => {
   try {
     // const a = await db.select().from("services");
-    const services = await db("services")
-      .leftJoin("images", "images.id", "news.news_img_id")
-      .select(
-        "services.id",
-        //
-        "services.title_uz",
-        "services.title_ru",
-        "services.title_en",
-
-        "services.desc_uz",
-        "services.desc_ru",
-        "services.desc_en",
-
-        "services.created_at",
-        //
-        "images.image_url"
-      )
-      .orderBy("services.id", "asc")
-      .groupBy("services.id", "images.id");
+    const services = await db("services").select("*").orderBy("id", "asc");
 
     console.log(services);
     res.json(services);

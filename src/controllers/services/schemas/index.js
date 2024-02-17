@@ -1,6 +1,6 @@
 const Joi = require("joi");
 
-patchDealersSchema = Joi.object({
+patchServicesSchema = Joi.object({
   title_uz: Joi.string(),
   title_ru: Joi.string(),
   title_en: Joi.string(),
@@ -12,7 +12,7 @@ patchDealersSchema = Joi.object({
   //
 });
 
-postDealersSchema = Joi.object({
+postServicesSchema = Joi.object({
   title_uz: Joi.string().required(),
   title_ru: Joi.string().required(),
   title_en: Joi.string(),
@@ -24,7 +24,7 @@ postDealersSchema = Joi.object({
   //
 });
 
-getDealersSchema = Joi.object({
+getServicesSchema = Joi.object({
   title_uz: Joi.string(),
   title_ru: Joi.string(),
   title_en: Joi.string(),
@@ -33,10 +33,11 @@ getDealersSchema = Joi.object({
   desc_ru: Joi.string(),
   desc_en: Joi.string(),
 });
+
 module.exports = {
-  patchDealersSchema,
-  postDealersSchema,
-  getDealersSchema,
+  patchServicesSchema,
+  postServicesSchema,
+  getServicesSchema,
 };
 
-// dealers
+// Services

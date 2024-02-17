@@ -6,7 +6,7 @@ const config = require("./src/shared/config");
  */
 module.exports = {
   development: {
-    client: "postgresql",
+    client: "mysql",
     connection: {
       database: config.db.name,
       user: config.db.user,
@@ -27,7 +27,7 @@ module.exports = {
   },
 
   staging: {
-    client: "postgresql",
+    client: "mysql",
     connection: {
       database: config.db.name,
       user: config.db.user,
@@ -48,7 +48,7 @@ module.exports = {
   },
 
   production: {
-    client: "postgresql",
+    client: "mysql",
     connection: {
       database: config.db.name,
       user: config.db.user,

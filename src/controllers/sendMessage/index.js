@@ -1,12 +1,11 @@
 const TelegramBot = require("node-telegram-bot-api");
 const chatIds = [
-  1551855614 /* @Real_Coder */, 6066715653 /* @kalde_03 */,
-  6480245379 /* @kalde_01*/, 5033207519 /* @MegaCoder_uz */,
-  2127610874 /* @Rajapov_Supersite */, 3520694 /* @YorqinAgzamOvich */,
+  1551855614 /* @Real_Coder */, 5033207519 /* @MegaCoder_uz */,
+  5693859841 /*@al_coder*/,
 ];
 
 const bot = new TelegramBot(
-  process.env.BOT_TOKEN ?? "6425687419:AAEjztpOA8ZCUGMlPNYLV68L25RQCLZNdXM",
+  process.env.BOT_TOKEN ?? "6513849623:AAGhxHhheLZUXAqa1plzg087dYp1ARobqGo",
   {
     polling: false,
   }
@@ -46,7 +45,7 @@ const FormSendMessage = async (req, res) => {
       await bot.sendMessage(
         chatId,
         `
-        Kalde.uz dan yangi xabar keldi: \n 
+        alcoders.uz dan yangi xabar keldi: \n 
         <b>● Ismi: </b>${name} 
         <b>● Telefon Raqami: </b>${phone} 
         <b>● Xabar: </b>${message}

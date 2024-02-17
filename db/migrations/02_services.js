@@ -13,7 +13,7 @@ exports.up = function (knex) {
     table.text("desc_ru").notNullable();
     table.text("desc_en").notNullable();
 
-    table.integer("img_id").references("id").inTable("images").unique();
+    // table.integer("img_id").references("id").inTable("images").unique();
   });
 };
 
